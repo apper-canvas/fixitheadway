@@ -10,6 +10,7 @@ import ApperIcon from '@/components/ApperIcon'
 import Button from '@/components/atoms/Button'
 import Input from '@/components/atoms/Input'
 import Card from '@/components/atoms/Card'
+import ProfileTypeToggle from '@/components/handyman/ProfileTypeToggle'
 
 // Validation schema
 const registerSchema = z.object({
@@ -31,6 +32,7 @@ const RegisterPage = () => {
   const [showPassword, setShowPassword] = useState(false)
   const [showConfirmPassword, setShowConfirmPassword] = useState(false)
   const [passwordValidation, setPasswordValidation] = useState({})
+  const [profileType, setProfileType] = useState('user')
 
   const {
     register,
@@ -59,21 +61,27 @@ const RegisterPage = () => {
     }
   }, [password])
 
-  const onSubmit = async (data) => {
+const onSubmit = async (data) => {
     try {
       await registerUser({
         firstName: data.firstName,
         lastName: data.lastName,
         email: data.email,
         password: data.password,
-        phone: data.phone
+        phone: data.phone,
+        profileType
       })
-      navigate('/verify-email', { 
-        state: { 
-          email: data.email,
-          message: 'Registration successful! Please check your email to verify your account.'
-        }
-      })
+      
+      if (profileType === 'handyman') {
+        navigate('/handyman/register')
+      } else {
+        navigate('/verify-email', { 
+          state: { 
+            email: data.email,
+            message: 'Registration successful! Please check your email to verify your account.'
+          }
+        })
+      }
     } catch (error) {
       // Error is handled by auth context
     }
@@ -83,7 +91,6 @@ const RegisterPage = () => {
     // In real app, would initiate OAuth flow
     console.log(`OAuth register with ${provider}`)
   }
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-surface-50 to-surface-100 dark:from-surface-900 dark:to-surface-800 flex items-center justify-center p-4">
       <motion.div
@@ -103,6 +110,14 @@ const RegisterPage = () => {
             <p className="text-surface-600 dark:text-surface-400">
               Join FixIt Now and find reliable handymen
             </p>
+</div>
+
+          {/* Profile Type Selection */}
+          <div className="mb-6">
+            <ProfileTypeToggle
+              profileType={profileType}
+              onTypeChange={setProfileType}
+            />
           </div>
 
           {/* Error Alert */}

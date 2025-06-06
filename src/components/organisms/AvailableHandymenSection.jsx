@@ -24,8 +24,8 @@ import React from 'react'
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <AnimatePresence>
-                  {handymen.map((handyman, index) => (
-                    <HandymanCard key={handyman.id} handyman={handyman} onBookNow={onBookNow} index={index} />
+{handymen.map((handyman, index) => (
+                    <HandymanCard key={handyman.id} handyman={handyman} onBook={onBookNow} index={index} />
                   ))}
                 </AnimatePresence>
               </div>
