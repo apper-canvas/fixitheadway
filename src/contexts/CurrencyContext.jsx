@@ -15,6 +15,8 @@ export const CurrencyProvider = ({ children }) => {
   const [currency, setCurrency] = useState('USD')
   const [exchangeRates, setExchangeRates] = useState({})
   const [loading, setLoading] = useState(true)
+  const [isUpdating, setIsUpdating] = useState(false)
+  const [updateError, setUpdateError] = useState(null)
 
   useEffect(() => {
     loadExchangeRates()
@@ -31,14 +33,35 @@ export const CurrencyProvider = ({ children }) => {
       setExchangeRates(rates)
     } catch (error) {
       console.error('Failed to load exchange rates:', error)
+      setUpdateError('Failed to load exchange rates')
     } finally {
       setLoading(false)
     }
   }
 
-  const changeCurrency = (newCurrency) => {
-    setCurrency(newCurrency)
-    localStorage.setItem('fixit-currency', newCurrency)
+  const changeCurrency = async (newCurrency) => {
+    if (newCurrency === currency) return
+    
+    setIsUpdating(true)
+    setUpdateError(null)
+    
+    try {
+      // Simulate currency update process
+      await currencyService.simulateCurrencyUpdate()
+      
+      setCurrency(newCurrency)
+      localStorage.setItem('fixit-currency', newCurrency)
+      
+      // Force re-render of all components using currency
+      setTimeout(() => {
+        setIsUpdating(false)
+      }, 200)
+      
+    } catch (error) {
+      console.error('Failed to update currency:', error)
+      setUpdateError('Failed to update currency')
+      setIsUpdating(false)
+    }
   }
 
   const formatCurrency = (amount, targetCurrency = null) => {
@@ -56,6 +79,8 @@ export const CurrencyProvider = ({ children }) => {
     setCurrency: changeCurrency,
     exchangeRates,
     loading,
+    isUpdating,
+    updateError,
     formatCurrency,
     convertAmount,
     supportedCurrencies: currencyService.getSupportedCurrencies(),
@@ -64,7 +89,9 @@ export const CurrencyProvider = ({ children }) => {
 
   return (
     <CurrencyContext.Provider value={value}>
-      {children}
+      <div className={isUpdating ? 'currency-updating' : ''}>
+        {children}
+      </div>
     </CurrencyContext.Provider>
   )
 }

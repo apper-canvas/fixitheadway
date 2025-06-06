@@ -31,7 +31,7 @@ const PriceBreakdownModal = ({ isOpen, onClose, taskId }) => {
   }
 
 const formatAmount = (amount) => {
-    const convertedAmount = convertAmount(amount, 'USD', currency)
+    const convertedAmount = convertAmount(amount, 'USD')
     return formatCurrency(convertedAmount)
   }
   if (!isOpen) return null

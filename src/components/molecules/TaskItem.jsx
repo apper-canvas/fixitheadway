@@ -42,8 +42,8 @@ const TaskItem = ({ task, onClick, onDeleteTask }) => {
           <Text className="text-surface-900 dark:text-white font-medium mb-2">
             {task.description}
           </Text>
-          <div className="flex items-center space-x-4 text-sm text-surface-600 dark:text-surface-400 mb-3">
-            <Text type="span">Estimated: ${task.estimatedPrice}</Text>
+<div className="flex items-center space-x-4 text-sm text-surface-600 dark:text-surface-400 mb-3">
+            <Text type="span">Estimated: {formatCurrency(convertAmount(task.estimatedPrice, 'USD'))}</Text>
             <Text type="span">{task.location?.address}</Text>
           </div>
           <div className="flex items-center space-x-2">

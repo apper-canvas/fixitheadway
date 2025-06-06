@@ -8,7 +8,7 @@ function App() {
   return (
     <CurrencyProvider>
       <Router>
-        <div className="min-h-screen bg-surface-50 dark:bg-surface-900">
+        <div className="min-h-screen bg-surface-50 dark:bg-surface-900 transition-opacity duration-300">
           <Routes>
             <Route path="/" element={<HomePage />} />
           <Route path="*" element={<NotFound />} />

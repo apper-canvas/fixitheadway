@@ -31,7 +31,22 @@
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
   }
 
-  .dark .modal-content {
+.dark .modal-content {
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  }
+
+  /* Currency loading states */
+  .currency-updating {
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+  }
+
+  .currency-pulse {
+    animation: pulse 1.5s ease-in-out infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
   }
 }

@@ -71,6 +71,11 @@ class CurrencyService {
     }
     return symbols[currency] || '$'
   }
+async simulateCurrencyUpdate() {
+    // Simulate network delay for currency updates
+    await this.delay(800)
+    return true
+  }
 
   delay(ms) {
     return new Promise(resolve => setTimeout(resolve, ms))

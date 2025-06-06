@@ -69,8 +69,8 @@ onConfirmBooking
                       />
                     </div>
 
-                    <div className="pt-4 border-t border-surface-200 dark:border-surface-700">
-<div className="flex justify-between text-lg font-semibold text-surface-900 dark:text-white">
+<div className="pt-4 border-t border-surface-200 dark:border-surface-700">
+                      <div className="flex justify-between text-lg font-semibold text-surface-900 dark:text-white">
                         <Text type="span">Total</Text>
                         <Text type="span">{formatCurrency(convertAmount(selectedHandyman?.hourlyRate || 0, 'USD'))}/hr</Text>
                       </div>
