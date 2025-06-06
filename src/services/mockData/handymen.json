@@ -1,0 +1,182 @@
+[
+  {
+    "id": "h1",
+    "name": "Mike Rodriguez",
+    "photo": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop&crop=face",
+    "skills": ["Plumbing", "Electrical", "General Repair"],
+    "rating": 4.8,
+    "reviewCount": 127,
+    "hourlyRate": 75,
+    "availability": ["morning", "afternoon"],
+    "location": {
+      "address": "Downtown District",
+      "lat": 40.7589,
+      "lng": -73.9851
+    }
+  },
+  {
+    "id": "h2",
+    "name": "Sarah Chen",
+    "photo": "https://images.unsplash.com/photo-1494790108755-2616b612b0e5?w=400&h=400&fit=crop&crop=face",
+    "skills": ["Carpentry", "Furniture Assembly", "Cabinet Installation"],
+    "rating": 4.9,
+    "reviewCount": 89,
+    "hourlyRate": 65,
+    "availability": ["morning", "afternoon", "evening"],
+    "location": {
+      "address": "Midtown Area",
+      "lat": 40.7549,
+      "lng": -73.9840
+    }
+  },
+  {
+    "id": "h3",
+    "name": "David Thompson",
+    "photo": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face",
+    "skills": ["Electrical", "Smart Home", "Lighting"],
+    "rating": 4.7,
+    "reviewCount": 156,
+    "hourlyRate": 85,
+    "availability": ["afternoon", "evening"],
+    "location": {
+      "address": "Upper East Side",
+      "lat": 40.7736,
+      "lng": -73.9566
+    }
+  },
+  {
+    "id": "h4",
+    "name": "Maria Garcia",
+    "photo": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&crop=face",
+    "skills": ["Appliance Repair", "HVAC", "Maintenance"],
+    "rating": 4.6,
+    "reviewCount": 203,
+    "hourlyRate": 70,
+    "availability": ["morning", "afternoon"],
+    "location": {
+      "address": "Brooklyn Heights",
+      "lat": 40.6962,
+      "lng": -73.9979
+    }
+  },
+  {
+    "id": "h5",
+    "name": "James Wilson",
+    "photo": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
+    "skills": ["Plumbing", "Bathroom Renovation", "Kitchen Repair"],
+    "rating": 4.9,
+    "reviewCount": 94,
+    "hourlyRate": 80,
+    "availability": ["morning", "evening"],
+    "location": {
+      "address": "Queens Village",
+      "lat": 40.7282,
+      "lng": -73.7949
+    }
+  },
+  {
+    "id": "h6",
+    "name": "Lisa Park",
+    "photo": "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=400&h=400&fit=crop&crop=face",
+    "skills": ["Carpentry", "Deck Building", "Flooring"],
+    "rating": 4.8,
+    "reviewCount": 112,
+    "hourlyRate": 72,
+    "availability": ["afternoon", "evening"],
+    "location": {
+      "address": "Staten Island",
+      "lat": 40.5795,
+      "lng": -74.1502
+    }
+  },
+  {
+    "id": "h7",
+    "name": "Robert Kim",
+    "photo": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&crop=face",
+    "skills": ["Electrical", "Panel Upgrade", "Wiring"],
+    "rating": 4.7,
+    "reviewCount": 178,
+    "hourlyRate": 90,
+    "availability": ["morning", "afternoon"],
+    "location": {
+      "address": "Bronx Central",
+      "lat": 40.8448,
+      "lng": -73.8648
+    }
+  },
+  {
+    "id": "h8",
+    "name": "Amanda Foster",
+    "photo": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&h=400&fit=crop&crop=face",
+    "skills": ["Appliance Repair", "Washer/Dryer", "Refrigerator"],
+    "rating": 4.5,
+    "reviewCount": 87,
+    "hourlyRate": 68,
+    "availability": ["morning", "afternoon", "evening"],
+    "location": {
+      "address": "Manhattan West",
+      "lat": 40.7505,
+      "lng": -73.9934
+    }
+  },
+  {
+    "id": "h9",
+    "name": "Carlos Martinez",
+    "photo": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&h=400&fit=crop&crop=face",
+    "skills": ["Plumbing", "Pipe Repair", "Drain Cleaning"],
+    "rating": 4.8,
+    "reviewCount": 145,
+    "hourlyRate": 78,
+    "availability": ["morning", "evening"],
+    "location": {
+      "address": "Long Island City",
+      "lat": 40.7505,
+      "lng": -73.9776
+    }
+  },
+  {
+    "id": "h10",
+    "name": "Jennifer Lee",
+    "photo": "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=400&h=400&fit=crop&crop=face",
+    "skills": ["Carpentry", "Custom Shelving", "Trim Work"],
+    "rating": 4.9,
+    "reviewCount": 76,
+    "hourlyRate": 74,
+    "availability": ["afternoon", "evening"],
+    "location": {
+      "address": "Park Slope",
+      "lat": 40.6736,
+      "lng": -73.9778
+    }
+  },
+  {
+    "id": "h11",
+    "name": "Michael Brown",
+    "photo": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=400&fit=crop&crop=face",
+    "skills": ["Electrical", "Outlet Installation", "Circuit Repair"],
+    "rating": 4.6,
+    "reviewCount": 134,
+    "hourlyRate": 82,
+    "availability": ["morning", "afternoon"],
+    "location": {
+      "address": "East Village",
+      "lat": 40.7264,
+      "lng": -73.9818
+    }
+  },
+  {
+    "id": "h12",
+    "name": "Rachel Davis",
+    "photo": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=400&fit=crop&crop=face",
+    "skills": ["Appliance Repair", "Dishwasher", "Oven Repair"],
+    "rating": 4.7,
+    "reviewCount": 98,
+    "hourlyRate": 71,
+    "availability": ["morning", "afternoon", "evening"],
+    "location": {
+      "address": "Chelsea District",
+      "lat": 40.7424,
+      "lng": -74.0061
+    }
+  }
+]

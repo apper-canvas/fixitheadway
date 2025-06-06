@@ -1,0 +1,122 @@
+[
+  {
+    "id": "t1",
+    "category": "plumbing",
+    "description": "Kitchen sink is clogged and water is backing up. Need urgent repair.",
+    "images": [],
+    "location": {
+      "address": "123 Oak Street, Apartment 4B"
+    },
+    "urgency": "high",
+    "estimatedPrice": 125,
+    "createdAt": "2024-01-15T10:30:00.000Z"
+  },
+  {
+    "id": "t2",
+    "category": "electrical",
+    "description": "Living room outlets not working. Need electrician to diagnose and fix.",
+    "images": [],
+    "location": {
+      "address": "456 Pine Avenue, House"
+    },
+    "urgency": "normal",
+    "estimatedPrice": 150,
+    "createdAt": "2024-01-14T14:20:00.000Z"
+  },
+  {
+    "id": "t3",
+    "category": "carpentry",
+    "description": "Install floating shelves in bedroom. Have all materials ready.",
+    "images": [],
+    "location": {
+      "address": "789 Maple Drive, Condo 2A"
+    },
+    "urgency": "low",
+    "estimatedPrice": 80,
+    "createdAt": "2024-01-13T09:15:00.000Z"
+  },
+  {
+    "id": "t4",
+    "category": "appliance",
+    "description": "Washing machine making loud noises and not spinning properly.",
+    "images": [],
+    "location": {
+      "address": "321 Elm Street, Basement Unit"
+    },
+    "urgency": "normal",
+    "estimatedPrice": 95,
+    "createdAt": "2024-01-12T16:45:00.000Z"
+  },
+  {
+    "id": "t5",
+    "category": "plumbing",
+    "description": "Bathroom toilet keeps running. Need to replace internal components.",
+    "images": [],
+    "location": {
+      "address": "654 Cedar Lane, Townhouse"
+    },
+    "urgency": "normal",
+    "estimatedPrice": 75,
+    "createdAt": "2024-01-11T11:30:00.000Z"
+  },
+  {
+    "id": "t6",
+    "category": "electrical",
+    "description": "Install ceiling fan in master bedroom. Fan already purchased.",
+    "images": [],
+    "location": {
+      "address": "987 Birch Road, House"
+    },
+    "urgency": "low",
+    "estimatedPrice": 120,
+    "createdAt": "2024-01-10T13:20:00.000Z"
+  },
+  {
+    "id": "t7",
+    "category": "carpentry",
+    "description": "Repair squeaky wooden stairs. Multiple steps need attention.",
+    "images": [],
+    "location": {
+      "address": "147 Willow Street, Duplex"
+    },
+    "urgency": "normal",
+    "estimatedPrice": 110,
+    "createdAt": "2024-01-09T15:10:00.000Z"
+  },
+  {
+    "id": "t8",
+    "category": "appliance",
+    "description": "Refrigerator not cooling properly. Ice maker also not working.",
+    "images": [],
+    "location": {
+      "address": "258 Poplar Avenue, Apartment 7C"
+    },
+    "urgency": "urgent",
+    "estimatedPrice": 160,
+    "createdAt": "2024-01-08T08:45:00.000Z"
+  },
+  {
+    "id": "t9",
+    "category": "plumbing",
+    "description": "Install new bathroom faucet. Old one is leaking constantly.",
+    "images": [],
+    "location": {
+      "address": "369 Cherry Court, House"
+    },
+    "urgency": "high",
+    "estimatedPrice": 85,
+    "createdAt": "2024-01-07T12:00:00.000Z"
+  },
+  {
+    "id": "t10",
+    "category": "electrical",
+    "description": "Replace old electrical panel. Current one is outdated and unsafe.",
+    "images": [],
+    "location": {
+      "address": "741 Walnut Place, House"
+    },
+    "urgency": "high",
+    "estimatedPrice": 450,
+    "createdAt": "2024-01-06T10:30:00.000Z"
+  }
+]

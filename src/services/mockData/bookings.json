@@ -1,0 +1,140 @@
+[
+  {
+    "id": "b1",
+    "taskId": "t1",
+    "handymanId": "h1",
+    "scheduledTime": "2024-01-16T14:00:00.000Z",
+    "status": "confirmed",
+    "finalPrice": 125,
+    "messages": [
+      {
+        "id": "m1",
+        "sender": "customer",
+        "message": "Hi Mike, looking forward to getting this fixed today!",
+        "timestamp": "2024-01-16T13:45:00.000Z"
+      },
+      {
+        "id": "m2",
+        "sender": "handyman",
+        "message": "On my way! Should be there in 15 minutes.",
+        "timestamp": "2024-01-16T13:50:00.000Z"
+      }
+    ]
+  },
+  {
+    "id": "b2",
+    "taskId": "t3",
+    "handymanId": "h2",
+    "scheduledTime": "2024-01-17T10:00:00.000Z",
+    "status": "scheduled",
+    "finalPrice": 80,
+    "messages": []
+  },
+  {
+    "id": "b3",
+    "taskId": "t6",
+    "handymanId": "h3",
+    "scheduledTime": "2024-01-18T16:00:00.000Z",
+    "status": "scheduled",
+    "finalPrice": 120,
+    "messages": [
+      {
+        "id": "m3",
+        "sender": "handyman",
+        "message": "Just confirming our appointment for tomorrow at 4 PM. I'll bring all necessary tools.",
+        "timestamp": "2024-01-17T18:30:00.000Z"
+      }
+    ]
+  },
+  {
+    "id": "b4",
+    "taskId": "t4",
+    "handymanId": "h4",
+    "scheduledTime": "2024-01-15T11:00:00.000Z",
+    "status": "completed",
+    "finalPrice": 95,
+    "messages": [
+      {
+        "id": "m4",
+        "sender": "customer",
+        "message": "Thank you for the quick service! Washing machine is working perfectly now.",
+        "timestamp": "2024-01-15T12:30:00.000Z"
+      },
+      {
+        "id": "m5",
+        "sender": "handyman",
+        "message": "You're welcome! Don't hesitate to reach out if you need any future repairs.",
+        "timestamp": "2024-01-15T12:35:00.000Z"
+      }
+    ]
+  },
+  {
+    "id": "b5",
+    "taskId": "t8",
+    "handymanId": "h8",
+    "scheduledTime": "2024-01-16T09:00:00.000Z",
+    "status": "in-progress",
+    "finalPrice": 160,
+    "messages": [
+      {
+        "id": "m6",
+        "sender": "handyman",
+        "message": "Currently working on your refrigerator. Found the issue with the compressor.",
+        "timestamp": "2024-01-16T09:30:00.000Z"
+      }
+    ]
+  },
+  {
+    "id": "b6",
+    "taskId": "t9",
+    "handymanId": "h5",
+    "scheduledTime": "2024-01-17T15:00:00.000Z",
+    "status": "confirmed",
+    "finalPrice": 85,
+    "messages": []
+  },
+  {
+    "id": "b7",
+    "taskId": "t7",
+    "handymanId": "h6",
+    "scheduledTime": "2024-01-19T13:00:00.000Z",
+    "status": "scheduled",
+    "finalPrice": 110,
+    "messages": [
+      {
+        "id": "m7",
+        "sender": "customer",
+        "message": "The stairs are really squeaky, especially the 3rd and 7th steps.",
+        "timestamp": "2024-01-17T20:15:00.000Z"
+      },
+      {
+        "id": "m8",
+        "sender": "handyman",
+        "message": "Thanks for the details! I'll make sure to bring the right materials for those specific steps.",
+        "timestamp": "2024-01-17T20:20:00.000Z"
+      }
+    ]
+  },
+  {
+    "id": "b8",
+    "taskId": "t10",
+    "handymanId": "h7",
+    "scheduledTime": "2024-01-20T08:00:00.000Z",
+    "status": "scheduled",
+    "finalPrice": 450,
+    "messages": [
+      {
+        "id": "m9",
+        "sender": "handyman",
+        "message": "This is a big job! I'll need about 4-5 hours to complete the panel replacement safely.",
+        "timestamp": "2024-01-18T09:00:00.000Z"
+      },
+      {
+        "id": "m10",
+        "sender": "customer",
+        "message": "No problem, safety first! I'll make sure to be available all morning.",
+        "timestamp": "2024-01-18T09:05:00.000Z"
+      }
+    ]
+  }
+]
