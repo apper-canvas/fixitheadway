@@ -1,12 +1,13 @@
 import React from 'react'
-      import { motion, AnimatePresence } from 'framer-motion'
-      import { format } from 'date-fns'
-      import ApperIcon from '@/components/ApperIcon'
-      import Button from '@/components/atoms/Button'
-      import Input from '@/components/atoms/Input'
-      import Label from '@/components/atoms/Label'
-      import Text from '@/components/atoms/Text'
-      import TimeSlotSelector from '@/components/molecules/TimeSlotSelector'
+import { motion, AnimatePresence } from 'framer-motion'
+import { format } from 'date-fns'
+import ApperIcon from '@/components/ApperIcon'
+import Button from '@/components/atoms/Button'
+import Input from '@/components/atoms/Input'
+import Label from '@/components/atoms/Label'
+import Text from '@/components/atoms/Text'
+import TimeSlotSelector from '@/components/molecules/TimeSlotSelector'
+import { useCurrency } from '@/contexts/CurrencyContext'
 
       const BookingModal = ({
         showBookingModal,
@@ -16,12 +17,12 @@ import React from 'react'
         setSelectedDate,
         selectedTime,
         setSelectedTime,
-        onConfirmBooking
+onConfirmBooking
       }) => {
+        const { formatCurrency, convertAmount } = useCurrency()
         const timeSlots = [
           '09:00', '10:00', '11:00', '14:00', '15:00', '16:00', '17:00'
         ]
-
         return (
           <AnimatePresence>
             {showBookingModal && (
@@ -69,9 +70,9 @@ import React from 'react'
                     </div>
 
                     <div className="pt-4 border-t border-surface-200 dark:border-surface-700">
-                      <div className="flex justify-between text-lg font-semibold text-surface-900 dark:text-white">
+<div className="flex justify-between text-lg font-semibold text-surface-900 dark:text-white">
                         <Text type="span">Total</Text>
-                        <Text type="span">${selectedHandyman?.hourlyRate}/hr</Text>
+                        <Text type="span">{formatCurrency(convertAmount(selectedHandyman?.hourlyRate || 0, 'USD'))}/hr</Text>
                       </div>
                     </div>
 

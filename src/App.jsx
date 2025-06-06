@@ -1,15 +1,16 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
+import { CurrencyProvider } from '@/contexts/CurrencyContext'
 import HomePage from '@/components/pages/HomePage'
 import NotFound from './pages/NotFound'
-
 function App() {
   return (
-    <Router>
-      <div className="min-h-screen bg-surface-50 dark:bg-surface-900">
-        <Routes>
-<Route path="/" element={<HomePage />} />
+    <CurrencyProvider>
+      <Router>
+        <div className="min-h-screen bg-surface-50 dark:bg-surface-900">
+          <Routes>
+            <Route path="/" element={<HomePage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <ToastContainer
@@ -22,10 +23,11 @@ function App() {
           pauseOnFocusLoss
           draggable
           pauseOnHover
-          theme="light"
+theme="light"
         />
-      </div>
-    </Router>
+        </div>
+      </Router>
+    </CurrencyProvider>
   )
 }
 

@@ -3,13 +3,14 @@ import { motion, AnimatePresence } from 'framer-motion'
 import ApperIcon from '@/components/ApperIcon'
 import Button from '@/components/atoms/Button'
 import Text from '@/components/atoms/Text'
+import { useCurrency } from '@/contexts/CurrencyContext'
 import taskService from '@/services/api/taskService'
 
 const PriceBreakdownModal = ({ isOpen, onClose, taskId }) => {
+  const { formatCurrency, convertAmount, currency } = useCurrency()
   const [breakdown, setBreakdown] = useState(null)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(null)
-
   useEffect(() => {
     if (isOpen && taskId) {
       loadPriceBreakdown()
@@ -29,13 +30,10 @@ const PriceBreakdownModal = ({ isOpen, onClose, taskId }) => {
     }
   }
 
-  const formatCurrency = (amount) => {
-    return new Intl.NumberFormat('en-US', {
-      style: 'currency',
-      currency: 'USD'
-    }).format(amount)
+const formatAmount = (amount) => {
+    const convertedAmount = convertAmount(amount, 'USD', currency)
+    return formatCurrency(convertedAmount)
   }
-
   if (!isOpen) return null
 
   return (
@@ -108,12 +106,12 @@ const PriceBreakdownModal = ({ isOpen, onClose, taskId }) => {
                           <Text className="font-medium text-surface-900 dark:text-white">
                             {item.task}
                           </Text>
-                          <Text className="text-sm text-surface-600 dark:text-surface-400">
-                            {item.hours} hours × {formatCurrency(item.hourlyRate)}/hour
+<Text className="text-sm text-surface-600 dark:text-surface-400">
+                            {item.hours} hours × {formatAmount(item.hourlyRate)}/hour
                           </Text>
                         </div>
                         <Text className="font-semibold text-surface-900 dark:text-white">
-                          {formatCurrency(item.total)}
+                          {formatAmount(item.total)}
                         </Text>
                       </div>
                     ))}
@@ -121,8 +119,8 @@ const PriceBreakdownModal = ({ isOpen, onClose, taskId }) => {
                       <Text className="font-semibold text-surface-900 dark:text-white">
                         Labor Subtotal
                       </Text>
-                      <Text className="font-bold text-lg text-primary">
-                        {formatCurrency(breakdown.laborTotal)}
+<Text className="font-bold text-lg text-primary">
+                        {formatAmount(breakdown.laborTotal)}
                       </Text>
                     </div>
                   </div>
@@ -143,12 +141,12 @@ const PriceBreakdownModal = ({ isOpen, onClose, taskId }) => {
                           <Text className="font-medium text-surface-900 dark:text-white">
                             {item.name}
                           </Text>
-                          <Text className="text-sm text-surface-600 dark:text-surface-400">
-                            {item.quantity} {item.unit} × {formatCurrency(item.unitPrice)}/{item.unit}
+<Text className="text-sm text-surface-600 dark:text-surface-400">
+                            {item.quantity} {item.unit} × {formatAmount(item.unitPrice)}/{item.unit}
                           </Text>
                         </div>
                         <Text className="font-semibold text-surface-900 dark:text-white">
-                          {formatCurrency(item.total)}
+                          {formatAmount(item.total)}
                         </Text>
                       </div>
                     ))}
@@ -156,8 +154,8 @@ const PriceBreakdownModal = ({ isOpen, onClose, taskId }) => {
                       <Text className="font-semibold text-surface-900 dark:text-white">
                         Materials Subtotal
                       </Text>
-                      <Text className="font-bold text-lg text-secondary">
-                        {formatCurrency(breakdown.materialsTotal)}
+<Text className="font-bold text-lg text-secondary">
+                        {formatAmount(breakdown.materialsTotal)}
                       </Text>
                     </div>
                   </div>
@@ -182,8 +180,8 @@ const PriceBreakdownModal = ({ isOpen, onClose, taskId }) => {
                             {item.description}
                           </Text>
                         </div>
-                        <Text className="font-semibold text-surface-900 dark:text-white">
-                          {formatCurrency(item.amount)}
+<Text className="font-semibold text-surface-900 dark:text-white">
+                          {formatAmount(item.amount)}
                         </Text>
                       </div>
                     ))}
@@ -191,8 +189,8 @@ const PriceBreakdownModal = ({ isOpen, onClose, taskId }) => {
                       <Text className="font-semibold text-surface-900 dark:text-white">
                         Fees Subtotal
                       </Text>
-                      <Text className="font-bold text-lg text-accent">
-                        {formatCurrency(breakdown.feesTotal)}
+<Text className="font-bold text-lg text-accent">
+                        {formatAmount(breakdown.feesTotal)}
                       </Text>
                     </div>
                   </div>
@@ -205,21 +203,21 @@ const PriceBreakdownModal = ({ isOpen, onClose, taskId }) => {
                   </Text>
                   <div className="space-y-2">
                     <div className="flex justify-between items-center">
-                      <Text className="text-surface-700 dark:text-surface-300">Labor</Text>
+<Text className="text-surface-700 dark:text-surface-300">Labor</Text>
                       <Text className="font-semibold text-surface-900 dark:text-white">
-                        {formatCurrency(breakdown.laborTotal)}
+                        {formatAmount(breakdown.laborTotal)}
                       </Text>
                     </div>
                     <div className="flex justify-between items-center">
                       <Text className="text-surface-700 dark:text-surface-300">Materials</Text>
                       <Text className="font-semibold text-surface-900 dark:text-white">
-                        {formatCurrency(breakdown.materialsTotal)}
+                        {formatAmount(breakdown.materialsTotal)}
                       </Text>
                     </div>
                     <div className="flex justify-between items-center">
                       <Text className="text-surface-700 dark:text-surface-300">Other Fees</Text>
                       <Text className="font-semibold text-surface-900 dark:text-white">
-                        {formatCurrency(breakdown.feesTotal)}
+                        {formatAmount(breakdown.feesTotal)}
                       </Text>
                     </div>
                     <div className="border-t border-surface-300 dark:border-surface-600 pt-2 mt-3">
@@ -227,8 +225,8 @@ const PriceBreakdownModal = ({ isOpen, onClose, taskId }) => {
                         <Text className="text-xl font-bold text-surface-900 dark:text-white">
                           Total Estimate
                         </Text>
-                        <Text className="text-2xl font-bold text-primary">
-                          {formatCurrency(breakdown.totalEstimate)}
+<Text className="text-2xl font-bold text-primary">
+                          {formatAmount(breakdown.totalEstimate)}
                         </Text>
                       </div>
                     </div>
