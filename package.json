@@ -20,7 +20,14 @@
     "react-toastify": "^11.0.5",
     "lucide-react": "^0.299.0",
     "date-fns": "^4.1.0",
-    "zustand": "^4.4.1"
+    "zustand": "^4.4.1",
+    "bcryptjs": "^2.4.3",
+    "jsonwebtoken": "^9.0.2",
+    "qrcode": "^1.5.3",
+    "crypto-js": "^4.2.0",
+    "react-hook-form": "^7.48.2",
+    "zod": "^3.22.4",
+    "@hookform/resolvers": "^3.3.2"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",
